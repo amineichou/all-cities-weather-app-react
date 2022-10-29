@@ -1,38 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@600&family=Josefin+Sans:wght@600&family=Poppins:wght@600&display=swap');
+
+/* 
+font-family: 'Cabin', sans-serif;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+
+body {
+  font-family: 'Cabin', sans-serif;
+}
+
 .App {
-  text-align: center;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.home {
+  display: flex;
+  flex-direction: column;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* search */
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+.home>.search-container>.search {
+  display: flex;
+  align-items: center;
+  padding: 6px;
+  background-color: #892be280;
+  justify-content: center;
+  border-radius: 50px;
+  width: fit-content;
+  color: #ffffff;color: #ffffff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.home>.search-container>.search svg {
+  width: 20px;
+  height: 20px;
+  padding: 10px;
+}
+
+.home>.search-container>.search input {
+  padding: 10px;
+  min-width: 240px;
+  width: 30vmax;
+  outline: none;
+  background: none;
+  border: none;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+}
+
+.home-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+/* weather box */
+.weather-box {
+  display: flex;
+  background-color: #892be2;
+  color: #ffffff;
+  gap: 10px;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 150px;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.weather-box img {
+  width: 100px;
+  height: 100px;
+}
+
+.weather-box>.info {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  gap: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.weather-box>.info h1 {
+  font-size: 20px;
+  padding: 10px;
+  width: 100px;
+  text-transform: capitalize;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.weather-box>.info h2 {
+  font-size: 20px;
+  width: 100px;
 }
